@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <script src="jquery-2.1.0.min.js"></script>
+<!--   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
+  <script src="script.js"></script>
+  <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:400,700">
+  <link type="text/css" rel="stylesheet" href="stylesheet.css">
+  <!--<link rel="stylesheet" type="text/css" href="semantic-ui/dist/semantic.min.css">
+  <script src="semantic-ui/dist/semantic.min.js"></script>-->
+</head>
+<body>
+  <div class="page-overlay hidden"></div>
+  <div class="proj-details hidden">
+    PLEASE
+  </div>
+  <div class="navbar" id="nav-main">
+    <div class="item active" id="item-about">ABOUT</div>
+    <div class="item" id="item-projects">PROJECTS</div>
+    <div class="item" id="item-resume">RESUME</div>
+  </div>
+  <div class="container about">
+    <img src="./img/propic.png" id="main-pic">
+    <div class="main-content">
+      <div class="name first">Anatol</div><div class="name">Liu</div>
+      <div class="desc">I am a current sophomore in the School of Computer Science at Carnegie Mellon. </div>
+      <div class="desc">This is a place where I keep all the things that I've been working on. Feel free to look around at your leisure.</div>
+    </div>
+  </div>
+  <div class="container projects hidden">
+    <!-- <div class="navbar project" id="nav-project">
+      <div class="item project active" id="item-project-tech">tech</div>
+      <div class="item project" id="item-project-music">music</div>
+      <div class="item project" id="item-project-art">art</div>
+    </div>
+    <div id="wrapper-tech">
+      <div class="project-container">
+        <img src="./img/tech-thumb/pianoscribe-thumb.png" class="thumb pianoscribe">
+        <div class="text-project">
+          <div class="title-project">PianoScribe</div>
+          <div class="desc-project">
+            Term Project for 15-112, Fundamentals of Programming. I built a native app that allowed users to record a piano sample, and then transcribed that sample onto sheet music. I used numpy and scipy for pitch and polyphony detection.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hidden" id="wrapper-music">
+    music
+    </div>
+    <div class="hidden" id="wrapper-art">
+    art
+    </div> 
+
+    <div> -->
+    <div class="project-row top">
+      <div class="thumb-wrap" id="proj-pianoscribe"><img src="./img/tech-thumb/pianoscribe-thumb-cropped.png" class="thumb">
+        <div class="thumb-overlay hidden" id="proj-pianoscribe-overlay">
+          <div class="overlay-title">PIANOSCRIBE</div>
+          <div class="overlay-type">tech</div>
+        </div>
+      </div>
+      <div class="thumb-wrap" id="proj-smartcan"><img src="./img/tech-thumb/smartcan-thumb-cropped.png" class="thumb">
+        <div class="thumb-overlay hidden" id="proj-smartcan-overlay">
+          <div class="overlay-title">SMARTCAN</div>
+          <div class="overlay-type">tech</div>
+        </div>
+      </div>
+      <div class="thumb-wrap" id="proj-sonnetify"><img src="./img/tech-thumb/sonnetify-thumb-cropped.png" class="thumb">
+      <div class="thumb-overlay hidden" id="proj-sonnetify-overlay">
+          <div class="overlay-title">SONNETIFY</div>
+          <div class="overlay-type">tech</div>
+        </div></div>
+    </div>
+    <div id="project-line-break"></div>
+    <div class="project-row">
+      <div class="thumb-wrap" id="proj-heattweet"><img src="./img/tech-thumb/heattweet-thumb-cropped.jpg" class="thumb">
+        <div class="thumb-overlay hidden" id="proj-heattweet-overlay">
+          <div class="overlay-title">HEATTWEET</div>
+          <div class="overlay-type">tech</div>
+        </div>
+      </div>
+      <div class="thumb-wrap" id="proj-rose"><img src="./img/tech-thumb/rose-thumb-cropped.png" class="thumb">
+        <div class="thumb-overlay hidden" id="proj-rose-overlay">
+          <div class="overlay-title">ROSE</div>
+          <div class="overlay-type">art</div>
+        </div>
+      </div>
+      <div class="thumb-wrap" id="proj-nujabes"><img src="./img/tech-thumb/nujabes-thumb-cropped.png" class="thumb">
+        <div class="thumb-overlay hidden" id="proj-nujabes-overlay">
+          <div class="overlay-title">NUJABES TRIBUTE</div>
+          <div class="overlay-type">art</div>
+        </div>
+      </div>
+    </div>
+    <div id="project-line-break"></div>
+    <div class="project-row">
+      <div class="thumb-wrap" id="proj-hair"><img src="./img/tech-thumb/hair-thumb-cropped.jpg" class="thumb">
+        <div class="thumb-overlay hidden" id="proj-hair-overlay">
+          <div class="overlay-title">CRIMSON STRANDS</div>
+          <div class="overlay-type">art</div>
+        </div>
+      </div>
+      <div class="thumb-wrap" id="proj-ff"><img src="./img/tech-thumb/ff-thumb-cropped.jpg" class="thumb">
+        <div class="thumb-overlay hidden" id="proj-ff-overlay">
+          <div class="overlay-title">EYES ON ME (cover)</div>
+          <div class="overlay-type">piano</div>
+        </div>
+      </div>
+      <div class="thumb-wrap" id="proj-journey"><img src="./img/tech-thumb/journey-thumb-cropped.jpg" class="thumb">
+        <div class="thumb-overlay hidden" id="proj-journey-overlay">
+          <div class="overlay-title">NASCENCE (cover)</div>
+          <div class="overlay-type">piano</div>
+        </div>
+      </div>
+    </div>
+    <div class="footer"></div>
+  </div>
+  <div class="container resume hidden">
+    <div id="resume-embed">
+      <embed id="resume-embed" src="./img/resume_4.pdf" type='application/pdf'>
+    </div>
+  </div>
+</body>
+</html>
+
+
+
+
+
