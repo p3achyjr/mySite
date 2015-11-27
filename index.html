@@ -2,20 +2,208 @@
 <html>
 <head>
   <title></title>
-  <script src="jquery-2.1.0.min.js"></script>
-<!--   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
+  <!-- <script src="jquery-2.1.0.min.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://connect.soundcloud.com/sdk/sdk-3.0.0.js"></script>
   <script src="script.js"></script>
   <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:400,700">
+  <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/components/icon.min.css">
   <link type="text/css" rel="stylesheet" href="stylesheet.css">
   <!--<link rel="stylesheet" type="text/css" href="semantic-ui/dist/semantic.min.css">
   <script src="semantic-ui/dist/semantic.min.js"></script>-->
 </head>
 <body>
   <div class="page-overlay hidden"></div>
-  <div class="proj-details hidden">
-    PLEASE
+  <div class="proj-details hidden" id="proj-pianoscribe-details"> 
+    <img class="close-btn hidden" src="./img/close-btn.png">
+    <iframe class="video-embed" src="https://www.youtube.com/embed/tcyQiPDPa9M" frameborder="0" allowfullscreen></iframe>
+    <div class="proj-desc">
+      <div class="proj-desc-title">PIANOSCRIBE</div>
+      <div class="proj-links">
+        <a href="https://youtu.be/tcyQiPDPa9M" target="_blank">
+          <img class="icon" src="./img/icons/youtube-icon.png">
+        </a>
+        <a href="https://github.com/p3achyjr/transcribe" target="_blank">
+          <img class="icon" src="./img/icons/github-icon.png">
+        </a>
+      </div>
+      <div class="proj-desc-body">
+        This was my term project for 15-112, Fundamentals of Programming. I created an app that allowed a user to record a piano sample, and then transcribed that sample onto sheet music. I used numpy and scipy to take fast fourier transforms, and wrote my own beat, polyphony and key signature detection algorithms.
+      </div>
+      <div class="proj-desc-body">
+        This project was an attempt to mitigate the frustration my rudimentary transcription skills at the time caused me. I would often think of a melody in my head, only to be unable to play it in real life. It was also inspired by my love of music, and an exploration of how computer science could be used to integrate both artistic and technical elements.
+      </div>
+    </div>
+  </div>
+  <div class="proj-details hidden" id="proj-repman-details"> 
+    <img class="close-btn hidden" src="./img/close-btn.png">
+    <img class="img-embed" src="./img/repman.jpg">
+    <div class="proj-desc">
+      <div class="proj-desc-title">REPMAN</div>
+      <div class="proj-links">
+        <a href="https://github.com/p3achyjr/repman" target="_blank">
+          <img class="icon" src="./img/icons/github-icon.png">
+        </a>
+      </div>
+      <div class="proj-desc-body">
+        This is a wristband that, given workout specifications, will automatically tell you when you are done with a set, when you are with an exercise, and when you need to start again. It does this by counting the number of reps you have done after you press the start button, vibrating when you finish, and vibrating again after your rest period is over. It communicates wirelessly via a light blue bean. It detects reps by first smoothing accelerometer data, and then using a peak detection algorithm to detect when a rep has been done.
+      </div>
+      <div class="proj-desc-body">
+        This is inspired by how counting reps, and keeping track of rest periods, is often an annoyance for athletes. The market is currently flooded with products that require needless amounts of user interaction. Thus, we sought to create a simple, low-cost device that would have at least the same functionalities as many currently existing products, without as much overhead.
+      </div>
+    </div>
+  </div>
+  <div class="proj-details hidden" id="proj-smartcan-details"> 
+    <img class="close-btn hidden" src="./img/close-btn.png">
+    <img class="img-embed" src="./img/smartcan.png">
+    <div class="proj-desc">
+      <div class="proj-desc-title">SMARTCAN</div>
+      <div class="proj-links">
+        <a href="http://devpost.com/software/smartcan" target="_blank">
+          <img class="icon" src="./img/icons/devpost-icon.png">
+        </a>
+        <a href="https://github.com/mikado-glass-frogs" target="_blank">
+          <img class="icon" src="./img/icons/github-icon.png">
+        </a>
+      </div>
+      <div class="proj-desc-body">
+        A project created at PennApps Winter 2015. We created a trash can capable of sorting between recyclable and non-recyclable items. A person would scan a QR code on a garbage item, or use Google Glass to scan the QR code. The phone or Glass would then send a signal to the trash can. When the item is thrown out, the trash can would then dump it into either the recyclable section, or the rubbish section. This was built with an Intel Edison, node.js, laser-cut materials, a servo motor, and iOS.
+      </div>
+      <div class="proj-desc-body">
+        We were more concerned about the idea behind this project than the execution. We imagined a future where smartcans were ubiqituous, and, as such, one would not have to sort between recyclable and unrecyclable items. As such, the world would be one step closer to being green.
+      </div>
+    </div>
+  </div>
+  <div class="proj-details hidden" id="proj-sonnetify-details"> 
+    <img class="close-btn hidden" src="./img/close-btn.png">
+    <iframe class="video-embed" src="https://www.youtube.com/embed/wmHJMdCLhnk" frameborder="0" allowfullscreen></iframe>
+    <div class="proj-desc">
+      <div class="proj-desc-title">SONNETIFY</div>
+      <div class="proj-links">
+        <a href="https://www.youtube.com/watch?v=wmHJMdCLhnk" target="_blank">
+          <img class="icon" src="./img/icons/youtube-icon.png">
+        </a>
+        <a href="https://github.com/p3achyjr/songify" target="_blank">
+          <img class="icon" src="./img/icons/github-icon.png">
+        </a>
+      </div>
+      <div class="proj-desc-body">
+        A project created for 60-223, Intro to Physical Computing. A friend and I created a midi synthesizer that, after playing a few notes, would start to play along with you. We made our own pressure sensors, and used an arduino as a controller. The actual synthesizer was made of laser-cut wood and acrylic. The generated notes were made from pre-programmed chord progressions, and a markov chain.
+      </div>
+      <div class="proj-desc-body">
+        This was intended to be a children's toy. Children have wondrous imaginations, but little formal training in the world of music. This was intended to bridge the gap between childrens' imaginations and their ability to execute the music they may be hearing in their heads.
+      </div>
+    </div>
+  </div>
+  <div class="proj-details hidden" id="proj-heattweet-details"> 
+    <img class="close-btn hidden" src="./img/close-btn-dark.png">
+    <img class="img-embed" src="./img/heattweetmap.jpg">
+    <div class="proj-desc">
+      <div class="proj-desc-title">HEATTWEET</div>
+      <div class="proj-links">
+        <a href="http://devpost.com/software/heattweet" target="_blank">
+          <img class="icon" src="./img/icons/devpost-icon.png">
+        </a>
+        <a href="https://github.com/p3achyjr/HackPrinceton" target="_blank">
+          <img class="icon" src="./img/icons/github-icon.png">
+        </a>
+      </div>
+      <div class="proj-desc-body">
+        A project created at HackPrinceton Fall 2014. We created a heatmap that plotted tweets in real time on a map. Upon hover, the content of the tweet could be viewed. Tweets could also be searched for by keyword. This was built using bare HTML/CSS/JS/PHP, with some help from Rails.
+      </div>
+      <div class="proj-desc-body">
+        We were curious as to what kind of tweets would show up, and to the kinds of tweets that would show up at certain times during the day. For example, during the early morning hours, the search for coffee yielded many results, while later in the morning, the keyword brunch was very popular.
+      </div>
+    </div>
+  </div>
+  <div class="proj-details hidden" id="proj-rose-details"> 
+    <img class="close-btn hidden" src="./img/close-btn.png">
+    <img class="img-embed" src="./img/rose.png">
+    <div class="proj-desc">
+      <div class="proj-desc-title">ROSE</div>
+      <div class="proj-links">
+        <a href="http://axlui.deviantart.com/art/It-s-just-a-rose-452000261" target="_blank">
+          <img class="icon" src="./img/icons/deviantart-icon.png">
+        </a>
+      </div>
+      <div class="proj-desc-body">
+        A flower I drew during my last year of high school. This is perhaps the most ambitious digital art project I have attempted. I tried to integrate the rose with the pure black background, to make it appear as if the rose was emerging from the darkness.
+      </div>
+      <div class="proj-desc-body">
+        This was drawn in Photoshop using a mouse and pencil tool.
+      </div>
+    </div>
+  </div>
+  <div class="proj-details hidden" id="proj-nujabes-details"> 
+    <img class="close-btn hidden" src="./img/close-btn.png">
+    <img class="img-embed" src="./img/nujabes-inspired.png">
+    <div class="proj-desc">
+      <div class="proj-desc-title">NUJABES TRIBUTE</div>
+      <div class="proj-links">
+        <a href="http://axlui.deviantart.com/art/Nujabes-Inspired-332477606" target="_blank">
+          <img class="icon" src="./img/icons/deviantart-icon.png">
+        </a>
+      </div>
+      <div class="proj-desc-body">
+        A tribute to my favorite musical artist, Nujabes.
+      </div>
+      <div class="proj-desc-body">
+        Nujabes has the ability to momentarily make you feel like you're flying, drifting above all the things that ordinarily bind you to reality. This was my attempt to visually convey that feeling.
+      </div>
+      <div class="proj-desc-body">
+        This was drawn in Photoshop using a mouse and pencil tool.
+      </div>
+    </div>
+  </div>
+  <div class="proj-details hidden" id="proj-hair-details"> 
+    <img class="close-btn hidden" src="./img/close-btn-dark.png">
+    <img class="img-embed" src="./img/crimson-strands.jpg">
+    <div class="proj-desc">
+      <div class="proj-desc-title">CRIMSON STRANDS</div>
+      <div class="proj-links">
+        <a href="http://axlui.deviantart.com/art/Crimson-Strands-477513370" target="_blank">
+          <img class="icon" src="./img/icons/deviantart-icon.png">
+        </a>
+      </div>
+      <div class="proj-desc-body">
+        A digital piece I drew of a good friend. This was the first piece I drew where I did not attempt to be photorealistic. Instead, I sought to explore lighting and duotones, and thus purely used shades of red and blue.
+      </div>
+      <div class="proj-desc-body">
+        This was drawn in Photoshop with a mouse.
+      </div>
+    </div>
+  </div>
+  <div class="proj-details hidden" id="proj-ff-details" style="background-color:#f5f5f5"> 
+    <img class="close-btn hidden" src="./img/close-btn-dark.png">
+    <iframe class="sc-embed" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/225996829&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+    <div class="proj-desc">
+      <div class="proj-desc-title">EYES ON ME (COVER)</div>
+      <div class="proj-desc-body">
+        A cover of Eyes On Me, from Final Fantasy 8.
+      </div>
+      <div class="proj-desc-body">
+        The Final Fantasy series has long been one of my favorites. Although the gameplay can be lacking, the story, artwork and music make each game more than a worthwhile experience. Eyes On Me, a ballad that plays after the climax of Final Fantasy 8, is one of the most beautiful songs in the series, and also one of the most fun to play.
+      </div>
+      <div class="proj-desc-body">
+        This was played on my Yamaha P115, and recorded into Garageband.
+      </div>
+    </div>
+  </div>
+  <div class="proj-details hidden" id="proj-journey-details" style="background-color:#f5f5f5"> 
+    <img class="close-btn hidden" src="./img/close-btn-dark.png">
+    <iframe class="sc-embed" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/228880715&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+    <div class="proj-desc">
+      <div class="proj-desc-title">JOURNEY (COVER)</div>
+      <div class="proj-desc-body">
+        A cover of Nascence, from the game Journey.
+      </div>
+      <div class="proj-desc-body">
+        Journey is the most beautiful, most impactful gaming experience of my life. The game is a roller coaster, taking you through both ecstasy and crippling fear. This is a cover/improv over the opening song, and my attempt to do the game justice. It is nowhere near good enough to do the game justice, but I plan on recording many more renditions.
+      </div>
+    </div>
   </div>
   <div class="navbar" id="nav-main">
+    <div class="item contact" id="item-contact">CONTACT</div>
     <div class="item active" id="item-about">ABOUT</div>
     <div class="item" id="item-projects">PROJECTS</div>
     <div class="item" id="item-resume">RESUME</div>
@@ -60,20 +248,26 @@
           <div class="overlay-type">tech</div>
         </div>
       </div>
+      <div class="thumb-wrap" id="proj-repman"><img src="./img/tech-thumb/repman-thumb.jpg" class="thumb">
+        <div class="thumb-overlay hidden" id="proj-repman-overlay">
+          <div class="overlay-title">REPMAN</div>
+          <div class="overlay-type">tech</div>
+        </div>
+      </div>
       <div class="thumb-wrap" id="proj-smartcan"><img src="./img/tech-thumb/smartcan-thumb-cropped.png" class="thumb">
         <div class="thumb-overlay hidden" id="proj-smartcan-overlay">
           <div class="overlay-title">SMARTCAN</div>
           <div class="overlay-type">tech</div>
         </div>
       </div>
+    </div>
+    <div id="project-line-break"></div>
+    <div class="project-row">
       <div class="thumb-wrap" id="proj-sonnetify"><img src="./img/tech-thumb/sonnetify-thumb-cropped.png" class="thumb">
       <div class="thumb-overlay hidden" id="proj-sonnetify-overlay">
           <div class="overlay-title">SONNETIFY</div>
           <div class="overlay-type">tech</div>
         </div></div>
-    </div>
-    <div id="project-line-break"></div>
-    <div class="project-row">
       <div class="thumb-wrap" id="proj-heattweet"><img src="./img/tech-thumb/heattweet-thumb-cropped.jpg" class="thumb">
         <div class="thumb-overlay hidden" id="proj-heattweet-overlay">
           <div class="overlay-title">HEATTWEET</div>
@@ -86,15 +280,15 @@
           <div class="overlay-type">art</div>
         </div>
       </div>
+    </div>
+    <div id="project-line-break"></div>
+    <div class="project-row">
       <div class="thumb-wrap" id="proj-nujabes"><img src="./img/tech-thumb/nujabes-thumb-cropped.png" class="thumb">
         <div class="thumb-overlay hidden" id="proj-nujabes-overlay">
           <div class="overlay-title">NUJABES TRIBUTE</div>
           <div class="overlay-type">art</div>
         </div>
       </div>
-    </div>
-    <div id="project-line-break"></div>
-    <div class="project-row">
       <div class="thumb-wrap" id="proj-hair"><img src="./img/tech-thumb/hair-thumb-cropped.jpg" class="thumb">
         <div class="thumb-overlay hidden" id="proj-hair-overlay">
           <div class="overlay-title">CRIMSON STRANDS</div>
@@ -107,6 +301,9 @@
           <div class="overlay-type">piano</div>
         </div>
       </div>
+    </div>
+    <div id="project-line-break"></div>
+    <div class="project-row">
       <div class="thumb-wrap" id="proj-journey"><img src="./img/tech-thumb/journey-thumb-cropped.jpg" class="thumb">
         <div class="thumb-overlay hidden" id="proj-journey-overlay">
           <div class="overlay-title">NASCENCE (cover)</div>
@@ -118,8 +315,25 @@
   </div>
   <div class="container resume hidden">
     <div id="resume-embed">
-      <embed id="resume-embed" src="./img/resume_4.pdf" type='application/pdf'>
+      <a id="resume-embed" href="./img/resume-indd-light.pdf" target="_blank">
+        <img id="resume-embed" src="./img/resume-indd-light.png">
+      </a>
     </div>
+    <div class="footer"></div>
+  </div>
+  <div class="container contact hidden">
+    <div class="contact-wrapper">
+      <div class="contact-title">Ask me something or just chat. I'm always free to talk.</div>
+      <div class="contact-box email">
+        <div class="contact-type">email:</div>
+        <div class="contact-ctnt">axl@andrew.cmu.edu</div>
+      </div>
+      <div class="contact-box phone">
+        <div class="contact-type">phone:</div>
+        <div class="contact-ctnt">609-203-7393</div>
+      </div>
+    </div>
+    <div class="footer"></div>
   </div>
 </body>
 </html>
